@@ -5,6 +5,7 @@ class LoginPage {
 
   async navigate() {
     await this.page.goto('/login');
+    await this.page.waitForLoadState('networkidle');
   }
 
   async fillEmail(email) {
