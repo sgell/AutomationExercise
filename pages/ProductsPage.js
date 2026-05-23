@@ -22,7 +22,7 @@ class ProductsPage{
         }
     }
     async addToCartProduct() {
-        await this.page.locator('button.btn-default.cart').scrollIntoViewIfNeeded();
+        await this.page.waitForSelector('button.btn-default.cart');
         await this.page.locator('button.btn-default.cart').click();
     }
 }
