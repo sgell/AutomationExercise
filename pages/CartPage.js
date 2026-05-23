@@ -7,7 +7,7 @@ class CartPage{
         await  this.page.goto('/view_cart');
     }
     async clickViewCart() {
-        await this.page.locator('a[href="/view_cart"]').first().click({ force: true });
+        await this.page.goto('/view_cart');
     }
 
     async clickCheckOut(){
