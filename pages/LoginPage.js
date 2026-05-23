@@ -23,9 +23,12 @@ class LoginPage{
         await this.clickLoginButton();
     }
 
-    async acceptCookies(){
-     await this.page.locator('button:has-text("Consent")').click();
- }
+    async acceptCookies() {
+        const consent = this.page.locator('button:has-text("Consent")');
+        if (await consent.isVisible()) {
+            await consent.click();
+    }
 
 }
 module.exports = {LoginPage};
+
