@@ -6,9 +6,8 @@ class CartPage{
     async navigate(){
         await  this.page.goto('/view_cart');
     }
-    async clickViewCart(){
-        await this.page.locator('a[href="/view_cart"]').first().scrollIntoViewIfNeeded();
-        await  this.page.locator('a[href="/view_cart"]').first().click();
+    async clickViewCart() {
+        await this.page.locator('a[href="/view_cart"]').first().click({ force: true });
     }
 
     async clickCheckOut(){
