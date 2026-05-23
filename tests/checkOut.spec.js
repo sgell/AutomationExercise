@@ -26,7 +26,6 @@ test('order product' , async ({page}) =>{
     await cartPage.clickViewCart();
     await cartPage.clickCheckOut();
     await expect(page.locator('h2.heading', { hasText: 'Address Details' })).toBeVisible();
-    await productsPage.page.mouse.wheel(0,500);
     await cartPage.clickPlaceOrder;
 
 });
