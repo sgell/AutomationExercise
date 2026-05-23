@@ -22,7 +22,7 @@ class ProductsPage{
         }
     }
     async addToCartProduct(){
-        await this.page.locator('button.btn-default.cart').click();
+        await this.page.locator('button.btn-default.cart').click({ force: true });
     }
 }
 
