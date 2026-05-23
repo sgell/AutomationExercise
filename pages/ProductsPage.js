@@ -21,8 +21,9 @@ class ProductsPage{
             await consent.click();
         }
     }
-    async addToCartProduct(){
-        await this.page.locator('button.btn-default.cart').click({ force: true });
+    async addToCartProduct() {
+        await this.page.locator('.productinfo').first().hover();
+        await this.page.locator('button.btn-default.cart').first().click({ force: true });
     }
 }
 
