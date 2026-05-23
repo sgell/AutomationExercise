@@ -12,7 +12,7 @@ class ProductsPage{
     }
         //add first product
     async viewFirstProduct(){
-        await this.page.locator('a:has-text("View Product")').first().click();
+        await this.page.goto('/product_details/1');
     }
       //click on Consent cookies
     async acceptCookies(){
